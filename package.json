@@ -9,7 +9,13 @@
     "lint": "eslint src --max-warnings=0",
     "linte": "next lint",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "src/**/*": [
@@ -22,6 +28,8 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
@@ -32,6 +40,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.0",
+    "jest": "^27.0.6",
     "lint-staged": "^11.1.2",
     "pinst": "^2.1.6",
     "prettier": "2.3.2",
